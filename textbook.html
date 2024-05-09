@@ -1,0 +1,236 @@
+<html>
+
+<head>
+  <title>Textbook</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* CSS Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    header {
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    nav {
+      background-color: #333;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #4CAF50;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    section {
+      margin-bottom: 60px;
+    }
+
+    h2 {
+      color: #4CAF50;
+      margin-bottom: 30px;
+      text-align: center;
+      font-size: 2rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .book-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-gap: 30px;
+    }
+
+    .book-item {
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      text-align: center;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .book-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .book-item img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .book-item h3 {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      color: #4CAF50;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>RAYAN</h1>
+  </header>
+
+  <nav>
+    <a href="textbook.html">Textbooks</a>
+    <a href="digest.html">Digests</a>
+  </nav>
+
+  <main>
+    <section id="textbooks">
+      <h2><i class="fas fa-book-open"></i> Textbooks</h2>
+      <div class="book-list">
+        <div class="book-item">
+          <a href="1. English Textbook.pdf" target="_blank">
+            <img src="1. English.jpg">
+          </a>
+          <h3>English</h3>
+        </div>
+        <div class="book-item">
+          <a href="2(1). Algebra (Maths 1) Textbook.pdf" target="_blank">
+            <img src="2(1). Algebra (Maths 1).jpg">
+          </a>
+          <h3>Algebra (Maths 1)</h3>
+        </div>
+        <div class="book-item">
+          <a href="2(2). Geometry (Maths 2) Textbook.pdf" target="_blank">
+            <img src="2(2). Geometry (Maths 2).jpg">
+          </a>
+          <h3>Geometry (Maths 2)</h3>
+        </div>
+        <div class="book-item">
+          <a href="3(1). Science 1 Textbook.pdf" target="_blank">
+            <img src="3(1). Science 1.jpg">
+          </a>
+          <h3>Science 1</h3>
+        </div>
+        <div class="book-item">
+          <a href="3(2). Science 2 Textbook.pdf" target="_blank">
+            <img src="3(2). Science 2.jpg">
+          </a>
+          <h3>Science 2</h3>
+        </div>
+        <div class="book-item">
+          <a href="4. History & Political Science Textbook.pdf" target="_blank">
+            <img src="4. History & Political Science.jpg">
+          </a>
+          <h3>History & Political Science</h3>
+        </div>
+        <div class="book-item">
+          <a href="5. Geography & Economics Textbook.pdf" target="_blank">
+            <img src="5. Geography & Economics.jpg">
+          </a>
+          <h3>Geography & Economics</h3>
+        </div>
+        <div class="book-item">
+          <a href="6. Hindi Textbook.pdf" target="_blank">
+            <img src="6. Hindi.jpg">
+          </a>
+          <h3>Hindi</h3>
+        </div>
+        <div class="book-item">
+          <a href="7. Marathi Textbook.pdf" target="_blank">
+            <img src="7. Marathi.jpg">
+          </a>
+          <h3>Marathi</h3>
+        </div>
+        <div class="book-item">
+          <a href="8. Water Security Textbook.pdf" target="_blank">
+            <img src="8. Water Security.jpg">
+          </a>
+          <h3>Water Security</h3>
+        </div>
+        <div class="book-item">
+          <a href="9. Self Development.pdf" target="_blank">
+            <img src="9. Self Development.jpg">
+          </a>
+          <h3>Self Development</h3>
+        </div>
+    </section>
+  </main>
+
+  <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+  <script>
+    // JavaScript code
+    const bookItems = document.querySelectorAll('.book-item');
+
+    bookItems.forEach(item => {
+      const img = item.querySelector('img');
+      const pdfUrl = img.dataset.pdf;
+
+      pdfjsLib.getDocument(pdfUrl).promise.then(pdf => {
+        pdf.getPage(1).then(page => {
+          const scale = 1.5;
+          const viewport = page.getViewport({ scale });
+          const canvas = document.createElement('canvas');
+          const context = canvas.getContext('2d');
+          canvas.height = viewport.height;
+          canvas.width = viewport.width;
+
+          const renderContext = {
+            canvasContext: context,
+            viewport
+          };
+
+          page.render(renderContext);
+          img.src = canvas.toDataURL();
+        });
+      }).catch(error => {
+        console.error('Error rendering PDF:', error);
+      });
+
+      item.addEventListener('click', () => {
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+        if (isMobile) {
+          // Open PDF in default app for mobile devices
+          window.open(`${pdfUrl}`, '_blank');
+        } else {
+          // Open PDF in a new tab for desktops/laptops
+          window.open(`${pdfUrl}`);
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
